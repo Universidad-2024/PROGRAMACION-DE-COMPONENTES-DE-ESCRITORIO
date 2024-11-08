@@ -12,5 +12,8 @@ namespace DataLayer
         bool UpdateEquipo(int equipoId, string nombreEquipo, int cantidadJugadores, string nombreDT, string tipoEquipo, string capitanEquipo, bool tieneSub21);
         bool DeleteEquipo(int equipoId);
         List<Equipo> GetAllEquipos();
+
+        int ObtenerCantidadEquiposFemeninos();
+        int ObtenerCantidadEquiposMasculinos();
     }
 }

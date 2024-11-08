@@ -1,0 +1,25 @@
+﻿<Window x:Class="FootballManagement.DetalleEquipoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FootballManagement"
+        mc:Ignorable="d"
+        Title="DetalleEquipoWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Nombre del Equipo:" FontWeight="Bold"/>
+            <TextBlock x:Name="NombreEquipoTextBlock"/>
+            <TextBlock Text="Cantidad de Jugadores:" FontWeight="Bold"/>
+            <TextBlock x:Name="CantidadJugadoresTextBlock"/>
+            <TextBlock Text="Nombre del Director Técnico:" FontWeight="Bold"/>
+            <TextBlock x:Name="NombreDTTextBlock"/>
+            <TextBlock Text="Tipo de Equipo:" FontWeight="Bold"/>
+            <TextBlock x:Name="TipoEquipoTextBlock"/>
+            <TextBlock Text="Capitán del Equipo:" FontWeight="Bold"/>
+            <TextBlock x:Name="CapitanEquipoTextBlock"/>
+            <TextBlock Text="¿Tiene Sub21?" FontWeight="Bold"/>
+            <TextBlock x:Name="TieneSub21TextBlock"/>
+        </StackPanel>
+    </Grid>
+</Window>

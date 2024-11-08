@@ -25,3 +25,5 @@ C:\Users\blope\source\repos\UI\FootballManagement\obj\Debug\FootballManagement.e
 C:\Users\blope\source\repos\UI\FootballManagement\obj\Debug\FootballManagement.pdb
 C:\Users\blope\source\repos\UI\FootballManagement\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\blope\source\repos\UI\FootballManagement\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\blope\source\repos\UI\FootballManagement\obj\Debug\DetalleEquipoWindow.g.cs
+C:\Users\blope\source\repos\UI\FootballManagement\obj\Debug\DetalleEquipoWindow.baml

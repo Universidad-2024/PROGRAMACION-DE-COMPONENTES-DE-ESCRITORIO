@@ -37,5 +37,19 @@ namespace DataLayer
         {
             return _context.Equipo.ToList();
         }
+
+        public int ObtenerCantidadEquiposFemeninos()
+        {
+            var result = _context.spObtenerCantidadEquiposFemeninos().FirstOrDefault();
+            Console.WriteLine(result);
+            return result.HasValue ? result.Value : 0;
+
+        }
+
+        public int ObtenerCantidadEquiposMasculinos()
+        {
+            var result = _context.spObtenerCantidadEquiposMasculinos().FirstOrDefault();
+            return result.HasValue ? result.Value : 0;
+        }
     }
 }

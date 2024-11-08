@@ -35,6 +35,7 @@ namespace FootballManagement
         {
             var equipos = _equipoRepository.GetAllEquipos();
             EquiposDataGrid.ItemsSource = equipos;
+            MostrarTotalesEquipos();
         }
 
         private void Agregar_Click(object sender, RoutedEventArgs e)
@@ -45,6 +46,17 @@ namespace FootballManagement
                 CargarEquipos();
             }
         }
+
+        private void MostrarTotalesEquipos()
+        {
+            int totalMasculinos = _equipoRepository.ObtenerCantidadEquiposMasculinos();
+            int totalFemeninos = _equipoRepository.ObtenerCantidadEquiposFemeninos();
+
+            TotalMasculinosTextBlock.Text = totalMasculinos.ToString();
+            TotalFemeninosTextBlock.Text = totalFemeninos.ToString();
+        }
+
+
 
         private void Modificar_Click(object sender, RoutedEventArgs e)
         {
@@ -63,9 +75,25 @@ namespace FootballManagement
             }
         }
 
-        private void Eliminar_Click(object sender, RoutedEventArgs e)
+        private void VerDetalles_Click(object sender, RoutedEventArgs e)
         {
             var equipoSeleccionado = EquiposDataGrid.SelectedItem as Equipo;
+            if (equipoSeleccionado != null)
+            {
+                // Crear la ventana de detalles y pasarle el equipo seleccionado
+                var detalleEquipoWindow = new DetalleEquipoWindow(equipoSeleccionado);
+                detalleEquipoWindow.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un equipo para ver los detalles.");
+            }
+        }
+
+
+        private void Eliminar_Click(object sender, RoutedEventArgs e)
+        {
+            Equipo equipoSeleccionado = EquiposDataGrid.SelectedItem as Equipo;
             if (equipoSeleccionado != null)
             {
                 var resultado = MessageBox.Show("¿Está seguro de eliminar este equipo?", "Confirmar Eliminación", MessageBoxButton.YesNo);
@@ -86,11 +114,6 @@ namespace FootballManagement
             {
                 MessageBox.Show("Por favor, seleccione un equipo para eliminar.");
             }
-        }
-
-        private void Actualizar_Click(object sender, RoutedEventArgs e)
-        {
-            CargarEquipos();
         }
     }
 }

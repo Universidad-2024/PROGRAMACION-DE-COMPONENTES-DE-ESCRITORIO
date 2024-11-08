@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AgregarModificarEquipoWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\blope\\source\\repos\\UI\\FootballManagement\\AgregarModificarEquipoWindow.xaml.cs",
-              "RelativeDocumentMoniker": "FootballManagement\\AgregarModificarEquipoWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\blope\\source\\repos\\UI\\FootballManagement\\AgregarModificarEquipoWindow.xaml.cs",
-              "RelativeToolTip": "FootballManagement\\AgregarModificarEquipoWindow.xaml.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAwwF4AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T07:08:24.909Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -41,9 +28,22 @@
               "RelativeDocumentMoniker": "FootballManagement\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\blope\\source\\repos\\UI\\FootballManagement\\MainWindow.xaml.cs",
               "RelativeToolTip": "FootballManagement\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwCkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T07:07:55.756Z",
+              "WhenOpened": "2024-11-08T08:13:27.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AgregarModificarEquipoWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\blope\\source\\repos\\UI\\FootballManagement\\AgregarModificarEquipoWindow.xaml.cs",
+              "RelativeDocumentMoniker": "FootballManagement\\AgregarModificarEquipoWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\blope\\source\\repos\\UI\\FootballManagement\\AgregarModificarEquipoWindow.xaml.cs",
+              "RelativeToolTip": "FootballManagement\\AgregarModificarEquipoWindow.xaml.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwFMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T08:13:07.092Z",
               "EditorCaption": ""
             }
           ]

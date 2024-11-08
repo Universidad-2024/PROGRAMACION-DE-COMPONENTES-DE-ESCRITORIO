@@ -10,8 +10,19 @@
         <!-- Título -->
         <TextBlock Text="Lista de Equipos" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" />
 
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10">
+            <TextBlock Text="Equipos Masculinos:"/>
+            <TextBlock x:Name="TotalMasculinosTextBlock" Text="0" Height="55"/>
+        </StackPanel>
+
+        <!-- Contenedor para los totales de equipos femeninos -->
+        <StackPanel HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top" Orientation="Vertical">
+            <TextBlock Text="Equipos Femeninos:"/>
+            <TextBlock x:Name="TotalFemeninosTextBlock" Text="0" Height="55"/>
+        </StackPanel>
+
         <!-- DataGrid para listar los equipos -->
-        <DataGrid x:Name="EquiposDataGrid" AutoGenerateColumns="False" Margin="0,40,0,80" IsReadOnly="True" SelectionMode="Single">
+        <DataGrid x:Name="EquiposDataGrid" AutoGenerateColumns="False" Margin="0,91,0,80" IsReadOnly="True" SelectionMode="Single">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding EquipoId}" Width="50" />
                 <DataGridTextColumn Header="Nombre" Binding="{Binding NombreEquipo}" Width="150" />
@@ -19,13 +30,14 @@
                 <DataGridTextColumn Header="Tipo" Binding="{Binding TipoEquipo}" Width="100" />
             </DataGrid.Columns>
         </DataGrid>
+        
 
         <!-- Botones de acción -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20">
             <Button Content="Agregar" Width="75" Click="Agregar_Click"/>
             <Button Content="Modificar" Width="75" Click="Modificar_Click"/>
             <Button Content="Eliminar" Width="75" Click="Eliminar_Click"/>
-            <Button Content="Actualizar" Width="75" Click="Actualizar_Click"/>
+            <Button Content="Ver Detalles" Click="VerDetalles_Click"/>
         </StackPanel>
     </Grid>
 </Window>
