@@ -1,0 +1,12 @@
+C:\Users\blope\source\repos\UI\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\blope\source\repos\UI\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\blope\source\repos\UI\BusinessLayer\bin\Debug\DataLayer.dll
+C:\Users\blope\source\repos\UI\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\blope\source\repos\UI\BusinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\blope\source\repos\UI\BusinessLayer\bin\Debug\DataLayer.dll.config
+C:\Users\blope\source\repos\UI\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\blope\source\repos\UI\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\blope\source\repos\UI\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\blope\source\repos\UI\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
+C:\Users\blope\source\repos\UI\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\blope\source\repos\UI\BusinessLayer\obj\Debug\BusinessLayer.pdb

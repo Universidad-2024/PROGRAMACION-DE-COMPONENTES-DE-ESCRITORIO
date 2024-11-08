@@ -1,0 +1,57 @@
+﻿<Window x:Class="FootballManagement.AgregarModificarEquipoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FootballManagement"
+        mc:Ignorable="d"
+         Title="Agregar / Modificar Equipo" Height="500" Width="400">
+    <Grid>
+        <!-- Titulo de la ventana -->
+        <TextBlock Text="Agregar o Modificar Equipo" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0"/>
+
+        <!-- Campo para Nombre del Equipo -->
+        <StackPanel VerticalAlignment="Top" Margin="20,80,20,0">
+            <TextBlock Text="Nombre del Equipo:"/>
+            <TextBox x:Name="NombreEquipoTextBox" Width="350" Margin="0,5"/>
+        </StackPanel>
+
+        <!-- Campo para Cantidad de Jugadores -->
+        <StackPanel VerticalAlignment="Top" Margin="20,140,20,0">
+            <TextBlock Text="Cantidad de Jugadores:"/>
+            <TextBox x:Name="CantidadJugadoresTextBox" Width="350" Margin="0,5" />
+        </StackPanel>
+
+        <!-- Campo para Nombre del Director Técnico -->
+        <StackPanel VerticalAlignment="Top" Margin="20,200,20,0">
+            <TextBlock Text="Nombre del Director Técnico:"/>
+            <TextBox x:Name="NombreDTTextBox" Width="350" Margin="0,5"/>
+        </StackPanel>
+
+        <!-- Campo para Tipo de Equipo -->
+        <StackPanel VerticalAlignment="Top" Margin="20,260,20,0">
+            <TextBlock Text="Tipo de Equipo:"/>
+            <ComboBox x:Name="TipoEquipoComboBox" Width="350" Margin="0,5">
+                <ComboBoxItem>Masculino</ComboBoxItem>
+                <ComboBoxItem>Femenino</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Campo para Capitán del Equipo -->
+        <StackPanel VerticalAlignment="Top" Margin="20,320,20,0">
+            <TextBlock Text="Capitán del Equipo:"/>
+            <TextBox x:Name="CapitanEquipoTextBox" Width="350" Margin="0,5"/>
+        </StackPanel>
+
+        <!-- Campo para Tiene Sub21 -->
+        <StackPanel VerticalAlignment="Top" Margin="20,380,20,0">
+            <CheckBox x:Name="TieneSub21CheckBox" Content="Tiene Sub-21" HorizontalAlignment="Left" Margin="0,5"/>
+        </StackPanel>
+
+        <!-- Botones para Guardar y Cancelar -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,20">
+            <Button Content="Guardar" Width="100" Margin="10" Click="Guardar_Click"/>
+            <Button Content="Cancelar" Width="100" Margin="10" Click="Cancelar_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
