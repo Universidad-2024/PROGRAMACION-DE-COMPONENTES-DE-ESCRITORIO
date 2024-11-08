@@ -27,24 +27,21 @@ namespace FootballManagement
         }
 
         public AgregarModificarEquipoWindow(Equipo equipo)
-            : this() // Llama al constructor sin parámetros primero
+            : this()
         {
             _equipoExistente = equipo;
-            // Llenar los campos con los datos del equipo existente
             NombreEquipoTextBox.Text = equipo.NombreEquipo;
             CantidadJugadoresTextBox.Text = equipo.CantidadJugadores.ToString();
             NombreDTTextBox.Text = equipo.NombreDT;
-            TipoEquipoComboBox.SelectedItem = equipo.TipoEquipo; // Asumiendo que TipoEquipo es un texto
+            TipoEquipoComboBox.SelectedItem = equipo.TipoEquipo;
             CapitanEquipoTextBox.Text = equipo.CapitanEquipo;
             TieneSub21CheckBox.IsChecked = equipo.TieneSub21;
         }
 
         private void Guardar_Click(object sender, RoutedEventArgs e)
         {
-            // Obtener los valores de los controles de la UI
             string nombreEquipo = NombreEquipoTextBox.Text;
-            int cantidadJugadores;
-            bool cantidadValida = int.TryParse(CantidadJugadoresTextBox.Text, out cantidadJugadores); // Validar que sea un número
+            bool cantidadValida = int.TryParse(CantidadJugadoresTextBox.Text, out int cantidadJugadores);
 
             if (!cantidadValida)
             {
@@ -57,14 +54,46 @@ namespace FootballManagement
             string capitanEquipo = CapitanEquipoTextBox.Text;
             bool tieneSub21 = TieneSub21CheckBox.IsChecked ?? false;
 
-            // Llamar al método SaveEquipo de EquipoRepository
             var equipoRepository = new EquipoRepository();
-            bool resultado = equipoRepository.SaveEquipo(nombreEquipo, cantidadJugadores, nombreDT, tipoEquipo, capitanEquipo, tieneSub21);
+            bool resultado;
+
+            if (_equipoExistente != null)
+            {
+                _equipoExistente.NombreEquipo = nombreEquipo;
+                _equipoExistente.CantidadJugadores = cantidadJugadores;
+                _equipoExistente.NombreDT = nombreDT;
+                _equipoExistente.TipoEquipo = tipoEquipo;
+                _equipoExistente.CapitanEquipo = capitanEquipo;
+                _equipoExistente.TieneSub21 = tieneSub21;
+
+                resultado = equipoRepository.UpdateEquipo(
+                    _equipoExistente.EquipoId, 
+                    _equipoExistente.NombreEquipo, 
+                    _equipoExistente.CantidadJugadores,
+                    _equipoExistente.NombreDT,
+                    _equipoExistente.TipoEquipo,
+                    _equipoExistente.CapitanEquipo,
+                    _equipoExistente.TieneSub21
+                 );
+
+            } else
+            {
+       
+                resultado = equipoRepository.SaveEquipo(
+                    nombreEquipo, 
+                    cantidadJugadores, 
+                    nombreDT, 
+                    tipoEquipo, 
+                    capitanEquipo, 
+                    tieneSub21
+                 );
+            }
 
             if (resultado)
             {
                 MessageBox.Show("Equipo guardado correctamente.");
-                this.Close(); // Cerrar la ventana si se guardó correctamente
+                DialogResult = true;
+                this.Close();
             }
             else
             {
